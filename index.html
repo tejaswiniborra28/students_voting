@@ -1,0 +1,100 @@
+<html>
+<head>
+<title> voting </title>
+<link rel="stylesheet" type="text/css" href="stylesheet_index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body  style="background-color:#DCDCDC">
+	<script>			
+			function opennav() {
+				document.getElementById("sidenav").style.width = "245px";
+				document.getElementById("menu").style.opacity="0";
+			}
+			function closenav(){				
+				document.getElementById("sidenav").style.width="0";
+				document.getElementById("menu").style.opacity="1";	
+			}
+			
+	</script>
+	<!-- here starts -->
+	
+	<div class="topheader"> <h2 style="text-align:center-left"> Students voting </h2> </div>
+	<button id="menu" class="menubtn" onclick="opennav()">&#9776;Menu </button>
+	<div id="sidenav" class="sidenavbar">
+		<a class="closebtn" onclick="closenav()">&times;</a>
+		<ul style="list-style:none">			
+			<li><a href="#about us"> About us</a></li>			
+			<li><a href="#add activity">Add activity</a> </li>
+		</ul>
+	</div>
+	
+	<!-- insert slides -->
+	<div class="second_header">
+		<div class="box">
+				<img src="slide1.jpg" class="slides">
+				<img src="slide2.jpg" class="slides">
+		</div>
+		<div class="box">			
+				<table class="table table-hover" style="max-width:50%; margin:15px 0px 0px 100px;">
+					<thead> <tr> <th>election</th> <th> date</th> </tr></thead>
+					
+					<tbody>
+						<tr><td>class election</td> <td>26-01-2017</td></tr>
+						<tr><td>class election</td> <td>26-01-2017</td></tr>
+						<tr><td>class election</td> <td>26-01-2017</td></tr>
+						<tr><td>class election</td> <td>26-01-2017</td></tr>
+						<tr></tr>
+					</tbody>
+						
+					
+				</table>
+		</div>
+	</div>
+	<script>
+			var myIndex = 0;
+			carousel();
+			function carousel() {
+				var i;
+				var x = document.getElementsByClassName("slides");
+				for (i = 0; i < x.length; i++) {
+				   x[i].style.display = "none";  
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}
+				x[myIndex-1].style.display = "block";  
+				setTimeout(carousel, 3000); // Change image every 3 seconds
+			}
+	</script>
+	<br>
+	<div style="border-radius:10px;">
+		<!--   -->
+		<div id="about us" class="boxes" style="background-color:rgb(55, 148, 163)">
+			<p>An alternative voting channel to increase voter participation, reduce election costs while upholding the highest security,
+				verifiability and integrity standards.
+				Scytl Online Voting enables voters to cast their vote privately and easily from any location and on any device with 
+				Internet access (PC, tablet, smartphone, etc.), ensuring maximum election engagement by enabling remote and disabled voters 
+				to participate on equal terms.
+			</p>
+			<button class="boxes_btns" style="background-color:rgb(55, 148, 163)">more</button>
+		</div>
+	
+		<div id="add activity" class="boxes" >
+			<div class="pics_boxes">
+				<img class="pictures" src="add_election.jpg">
+			</div>
+			<div class="matter_boxes" style="background-color:rgb(206, 179, 45)" >
+				<p>
+					sdacgtoiinieuvcnhwmiexuehdncnbfhycgfy uegfxnukhsjdsfcnec fukesrcfjny jcfgeygeybgeygfnuer
+					cfeuicfhnehfeg nferjhrerhver
+					ueubusb fhebuce rrvcjfrvjfrfbws idwiyenccvu
+					nzstwvde wmihfrf rjiwgwceihrcb
+				</p>
+			<button class="boxes_btns" style="background-color:rgb(206, 179, 45)">add-activity</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
